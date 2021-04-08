@@ -1,3 +1,16 @@
+@import "../../node_modules/leaflet/dist/leaflet";
+.sidemenu {
+  --width: 450px;
+  &__logo {
+    padding: 20px;
+  }
+  //&__content {
+  //  --background: var(--ion-color-danger) !important;
+  //}
+  //&__list {
+  //  --background: var(--ion-color-danger) !important;
+  //}
+}
 ion-menu ion-content {
   --background: var(--ion-item-background, var(--ion-background-color, #fff));
 }

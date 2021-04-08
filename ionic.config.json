@@ -1,5 +1,7 @@
 {
   "name": "velo",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }

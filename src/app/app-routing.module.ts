@@ -1,16 +1,27 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import {MainPageComponent} from './modules/velo/pages/main-page/main-page.component';
+import {AboutPageComponent} from './modules/velo/pages/about-page/about-page.component';
+import {InstructionsPageComponent} from './modules/velo/pages/instructions-page/instructions-page.component';
 
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'folder/Inbox',
+    redirectTo: 'main',
     pathMatch: 'full'
   },
   {
-    path: 'folder/:id',
-    loadChildren: () => import('./folder/folder.module').then( m => m.FolderPageModule)
-  }
+    path: 'about',
+    component: AboutPageComponent
+  },
+  {
+    path: 'instructions',
+    component: InstructionsPageComponent
+  },
+  {
+    path: 'main',
+    component: MainPageComponent
+  },
 ];
 
 @NgModule({
