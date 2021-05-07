@@ -6,6 +6,26 @@
     <ion-title>Brest Stories Guide</ion-title>
   </ion-toolbar>
 </ion-header>
+
 <ion-content>
-  <app-map></app-map>
+  <app-map *ngIf="geoDataForCommonMap"  [geodata]="geoDataForCommonMap"></app-map>
 </ion-content>
+
+<lib-ionic-pullup [(state)]="footerState"  class="pull-up" [toolbarTopMargin]="600">
+  <ion-toolbar (click)="toggleFooter()" class="pull-up__toolbar">
+    <ion-title>{{footerTitle}}</ion-title>
+  </ion-toolbar>
+  <ion-content>
+    <ion-list *ngIf="routes?.length" >
+      <ion-item *ngFor="let item of routes" (click)="routeSelected(item)" class="pull-up__item">
+        <ion-label>
+          {{item?.properties?.name}}
+        </ion-label>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</lib-ionic-pullup>
+
+
+
+

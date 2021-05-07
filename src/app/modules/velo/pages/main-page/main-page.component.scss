@@ -1,1 +1,14 @@
+.pull-up {
+  height: 0;
+  &__toolbar {
+    --color: rgb(189, 32, 49);
+    --background: #dfdfdf;
+    font-size: 2rem;
+    cursor: pointer;
+    text-align: center;
+  }
+  &__item {
+    cursor: pointer;
+  }
+}
 

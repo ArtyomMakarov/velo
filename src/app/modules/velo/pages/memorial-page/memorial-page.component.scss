@@ -1,0 +1,22 @@
+.wrapper {
+  margin:  2rem;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.image {
+  margin: 1.5rem 0;
+}
+
+.toolbar {
+  &__title {
+    --color: #bd2031;
+    font-size: 25px;
+  }
+}
+
+ion-icon {
+  color: #bd2031;
+  font-size: 30px;
+  font-weight: bolder;
+}

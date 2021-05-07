@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-toolbar class="toolbar">
+    <ion-title class="toolbar__title">
+      {{ popUpFeature?.properties.name}}
+    </ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="dismiss()">
+        <ion-icon name="close-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="wrapper">
+    <div *ngIf="popUpFeature?.properties.image" class="image">
+      <img src="/assets/img/memorial/{{ popUpFeature?.properties.image }}" [alt]="popUpFeature?.properties.image_alt">
+    </div>
+    {{ popUpFeature?.properties.info }}
+  </div>
+</ion-content>

@@ -3,6 +3,8 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 import {MainPageComponent} from './modules/velo/pages/main-page/main-page.component';
 import {AboutPageComponent} from './modules/velo/pages/about-page/about-page.component';
 import {InstructionsPageComponent} from './modules/velo/pages/instructions-page/instructions-page.component';
+import {RoutePageComponent} from './modules/velo/pages/route-page/route-page.component';
+import {MemorialPageComponent} from './modules/velo/pages/memorial-page/memorial-page.component';
 
 const routes: Routes = [
   {
@@ -19,9 +21,17 @@ const routes: Routes = [
     component: InstructionsPageComponent
   },
   {
+    path: 'route/:id',
+    component: RoutePageComponent
+  },
+  {
     path: 'main',
     component: MainPageComponent
   },
+  {
+    path: 'memorial/:id',
+    component: MemorialPageComponent
+  }
 ];
 
 @NgModule({
