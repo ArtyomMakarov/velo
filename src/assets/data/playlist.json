@@ -1,0 +1,463 @@
+﻿{
+  "playlists": [
+    {
+      "routeName": "Выжившие",
+      "order": "50",
+      "totalAudioCount": 12,
+      "routeId": 2,
+      "audioList": [
+        {
+          "trackNumber": 1,
+          "name": "Дневник О. Зисмана, декабрь 1941",
+          "node": true,
+          "routeNumber": 1,
+          "source": "071_zisman_1942_12_1.mp3"
+        },
+        {
+          "trackNumber": 2,
+          "name": "Михаил Омелинский об укрытии",
+          "node": false,
+          "source": "073_d_45_omelinski_misha.mp3"
+        },
+        {
+          "trackNumber": 3,
+          "name": "Татьяна Гутман о спасении",
+          "node": false,
+          "source": "074_d_31_gutman_tania.mp3"
+        },
+        {
+          "trackNumber": 4,
+          "name": "Дневник О. Зисмана, 17.12.1942",
+          "node": false,
+          "source": "075_zisman_1942_12_17_.mp3"
+        },
+        {
+          "trackNumber": 5,
+          "name": "Дневник О. Зисмана, 3.1.1943",
+          "node": false,
+          "source": "076_zisman_1943_1_03.mp3"
+        },
+        {
+          "trackNumber": 6,
+          "name": "Вера Бакаляш о своем спасении",
+          "node": false,
+          "source": "077_d_34_bakaliash_vera.mp3"
+        },
+        {
+          "trackNumber": 7,
+          "name": "Дневник О. Зисмана, январь 1943",
+          "node": false,
+          "source": "078_zisman_1943_1.mp3"
+        },
+        {
+          "trackNumber": 9,
+          "name": "Володя Тарасюк: аукцион вещей из гетто",
+          "node": true,
+          "routeNumber": 2,
+          "source": "080_d_57_tarasiuk_vladimir_gogola_karbysheva.mp3"
+        },
+        {
+          "trackNumber": 10,
+          "name": "Полина Головченко (Праведница мира)",
+          "node": false,
+          "source": "081_d_54_golovchenko_polina_gogola_betw_karbysheva_sovetskoj.mp3"
+        },
+        {
+          "trackNumber": 11,
+          "name": "Женя Летун о казнях за воровство у главных ворот гетто",
+          "node": true,
+          "routeNumber": 3,
+          "source": "082_d_58_letun_zenia_gogola_sovetsk.mp3"
+        },
+        {
+          "trackNumber": 12,
+          "name": "Дневник О. Зисмана, ноябрь 1943",
+          "node": false,
+          "source": "083_zisman_1944_07_10_belarus.mp3"
+        }
+      ]
+    },
+
+    {
+      "routeName": "Уничтожение гетто",
+      "order": "40",
+      "totalAudioCount": 8,
+      "routeId": 4,
+      "audioList": [
+        {
+          "trackNumber": 1,
+          "name": "Миша Омелинский: ночь перед уничтожением",
+          "node": true,
+          "routeNumber": 1,
+          "source": "058_d_40_omelinsky_misha_ot_apteki_do_ostrovskogo.mp3"
+        },
+        {
+          "trackNumber": 2,
+          "name": "Дневник О. Зисмана 15.10.1942 г.",
+          "node": false,
+          "source": "059_zisman_1942_10_15.mp3"
+        },
+        {
+          "trackNumber": 3,
+          "name": "Женя Сашко об уничтожении гетто",
+          "node": false,
+          "source": "060_d_52_sashko_zjenia_upravlenie_policii_ostrovskogo12.mp3"
+        },
+        {
+          "trackNumber": 4,
+          "name": "Освальд Корнелиссен: из показаний",
+          "node": false,
+          "source": "061_d_59_cornellisen_oswald_iz_pokazanij_po_doroge_v_arku_yf_sovetskoj.mp3"
+        },
+        {
+          "trackNumber": 5,
+          "name": "Сестры Кацаф о своем спасении",
+          "node": false,
+          "source": "062_d_35_siostry_kacaf.mp3"
+        },
+        {
+          "trackNumber": 6,
+          "name": "Женя Фенюк о расстреле детей",
+          "node": false,
+          "source": "063_d_53_fenjuk_zjenia.mp3"
+        },
+        {
+          "trackNumber": 7,
+          "name": "Геннадий Клыпа: как обнаружили могильник",
+          "node": true,
+          "routeNumber": 3,
+          "source": "064_d_65_klypa_gena_kujbysheva90.mp3"
+        },
+        {
+          "trackNumber": 8,
+          "name": "Германн Хаппе: из показаний",
+          "node": false,
+          "source": "065_d_60_2_happe_hermann_iz_pokazanij.mp3"
+        },
+        {
+          "trackNumber": 9,
+          "name": "Полина Головченко о раввине",
+          "node": false,
+          "source": "066_d_41_golovchenko_polina_masherova.mp3"
+        }
+      ]
+    },
+
+
+    {
+      "routeName": "Жизнь в гетто",
+      "order": "30",
+      "totalAudioCount": 22,
+      "routeId": 3,
+      "audioList": [
+        {
+          "trackNumber": 1,
+          "name": "Роман Левин о бывшей квартире",
+          "node": false,
+          "source": "038_l_3_levin_roman_po_doroge_k_getto.mp3"
+        },
+        {
+          "trackNumber": 2,
+          "name": "Владимир Левинов о начале гетто",
+          "node": false,
+          "source": "039_d_37_levinov_vladimir.mp3"
+        },
+        {
+          "trackNumber": 3,
+          "name": "Роман Левин о смене паспортов",
+          "node": false,
+          "source": "040_l_4_levin_roman_pasporta.mp3"
+        },
+        {
+          "trackNumber": 4,
+          "name": "Германн Хаппе: из показаний",
+          "node": false,
+          "source": "041_d_60_1_happe_hermann_iz_pokazanij.mp3"
+        },
+        {
+          "trackNumber": 5,
+          "name": "Педан Ольга о туфельках",
+          "node": false,
+          "source": "042_d_55_pedan_olga.mp3"
+        },
+        {
+          "trackNumber": 7,
+          "name": "Роман Левин о быте в гетто ",
+          "node": false,
+          "source": "044_l_5_levin_roman.mp3"
+        },
+        {
+          "trackNumber": 8,
+          "name": "Дневник О. Зисмана, 01.12.1941",
+          "node": false,
+          "source": "045_zisman_1941_12_01.mp3"
+        },
+        {
+          "trackNumber": 9,
+          "name": "Роман Левин: зима в гетто",
+          "node": false,
+          "source": "046_l_6_levin_roman.mp3"
+        },
+        {
+          "trackNumber": 10,
+          "name": "Карпук Т. о детях в гетто",
+          "node": false,
+          "source": "047_d_36_karpuk_t.mp3"
+        },
+        {
+          "trackNumber": 11,
+          "name": "Роман Левин: жизнь в гетто",
+          "node": false,
+          "source": "048_l_7_levin_roman.mp3"
+        },
+        {
+          "trackNumber": 12,
+          "name": "Тамара Гецман о помощи евреям",
+          "node": false,
+          "source": "049_d_62_gecman_tamara.mp3"
+        },
+        {
+          "trackNumber": 13,
+          "name": "Л. Глузман, Йом-Киппур",
+          "node": false,
+          "source": "050_gluzman_4.mp3"
+        },
+        {
+          "trackNumber": 14,
+          "name": "Дневник О. Зисмана, 12.09.1942",
+          "node": false,
+          "source": "051_zisman_1942_09_12_o_molitvah.mp3"
+        },
+        {
+          "trackNumber": 15,
+          "name": "Коробова Евгения: история Аси",
+          "node": false,
+          "source": "052_d_43_korobova_evgenija.mp3"
+        },
+        {
+          "trackNumber": 16,
+          "name": "Омелинский Миша о подполье в гетто",
+          "node": false,
+          "source": "053_d_48_omelinsky_misha.mp3"
+        },
+        {
+          "trackNumber": 17,
+          "name": "Зенкина Валя о подполье",
+          "node": false,
+          "source": "054_d_49_zenkina_valia.mp3"
+        },
+        {
+          "trackNumber": 18,
+          "name": "Гребёнкина А. о подполье",
+          "node": false,
+          "source": "055_d_50_grebionkina_a.mp3"
+        },
+        {
+          "trackNumber": 19,
+          "name": "Л. Глузман про аптеку Гринберга",
+          "node": true,
+          "source": "056_gluzman_5.mp3"
+        },
+        {
+          "trackNumber": 20,
+          "name": "Миша Омелинский: конец подполья",
+          "node": false,
+          "source": "057_d_51_omelinsky_misha.mp3"
+        }
+      ]
+    },
+    {
+      "routeName": "Лето 1941 г.",
+      "order": "20",
+      "totalAudioCount": 11,
+      "routeId": 5,
+      "audioList": [
+        {
+          "trackNumber": 1,
+          "name": "Директива Лозе, Алик Садовский, Роман Левин, Л.Глузман, немецкие приказы, сестры Кацаф",
+          "node": true,
+          "source": "017_027_1941_leto_prikazy_svideteli.mp3"
+        },
+        {
+          "trackNumber": 2,
+          "name": "Роман Левин об июле 1941",
+          "node": true,
+          "source": "028_l_2_levin_roman.mp3"
+        },
+        {
+          "trackNumber": 3,
+          "name": "Курт Л.: из показаний",
+          "node": true,
+          "source": "029_d_22_kurt_l_iz_pokazanij.mp3"
+        },
+        {
+          "trackNumber": 4,
+          "name": "Эберхард С. о расстреле в крепости",
+          "node": true,
+          "source": "030_d_11_Eberhard_S_iz_iz_pokazanij.mp3"
+        },
+        {
+          "trackNumber": 5,
+          "name": "Сестры Кацаф",
+          "node": true,
+          "source": "031_d_15_siostry_kacaf.mp3"
+        },
+        {
+          "trackNumber": 6,
+          "name": "Л. Глузман об акции июля 1941 г.",
+          "node": true,
+          "source": "032_gluzman_2.mp3"
+        },
+        {
+          "trackNumber": 7,
+          "name": "Ханна Рогожаньская: в еврейской больнице",
+          "node": false,
+          "source": "033_d_67_rogozhanska_hanna_bolnica_evreiskaja.mp3"
+        },
+        {
+          "trackNumber": 8,
+          "name": "Лиза Римон: события в тюрьме ГПУ",
+          "node": false,
+          "source": "034_rimon_lisa_o_brate.mp3"
+        },
+        {
+          "trackNumber": 9,
+          "name": "Фридрих Нихофф о тюрьме ГПУ и расстреле",
+          "node": false,
+          "source": "035_d_20_friedrich_niehoff_iz_pokazanij_turma_fort2.mp3"
+        },
+        {
+          "trackNumber": 10,
+          "name": "Александра Хромова о расстреле на Граевке",
+          "node": true,
+          "source": "036_d_16_khromova_alexandra.mp3"
+        },
+        {
+          "trackNumber": 11,
+          "name": "Хайнрих М.: из показаний",
+          "node": true,
+          "source": "037_d_21_heinrich_m_iz_pokazanij_doroga_to_next_stop.mp3"
+        }
+      ]
+    },
+
+    {
+      "routeName": "1937- 1939 (дополнение)",
+      "order": "10",
+      "totalAudioCount": 16,
+      "routeId": 1,
+      "audioList": [
+        {
+          "trackNumber": 1,
+          "name": "Малый рынок. Место погрома. Май 1937",
+          "node": true,
+          "source": "001_d_2_pogrom_1937_05_rynok_avtovokzal.mp3"
+        },
+        {
+          "trackNumber": 2,
+          "name": "Малый рынок. Май 1937",
+          "node": true,
+          "source": "002_d_3_pogrom_1937_05_rynok_avtovokzal.mp3"
+        },
+        {
+          "trackNumber": 3,
+          "name": "Май 1937",
+          "node": false,
+          "source": "003_d_4_pogrom_1937_05_ot_puskinskoj_k_sovetskoj.mp3"
+        },
+        {
+          "trackNumber": 4,
+          "name": "Июнь 1937",
+          "node": false,
+          "source": "004_d_5_1937_06_ot_puskinskoj_k_sovetsko.mp3"
+        },
+        {
+          "trackNumber": 5,
+          "name": "1 сентября 1937",
+          "node": false,
+          "source": "005_d_6_1937_09_ot_puskinskoj_k_sovetsko.mp3"
+        },
+        {
+          "trackNumber": 6,
+          "name": "2 сентября 1937",
+          "node": false,
+          "source": "006_d_7_1937_09_po_sovetskoj.mp3"
+        },
+        {
+          "trackNumber": 7,
+          "name": "4 сентября 1937",
+          "node": false,
+          "source": "007_d_8_1937_09_po_sovetskoj.mp3"
+        },
+        {
+          "trackNumber": 8,
+          "name": "11 сентября 1937",
+          "node": false,
+          "source": "008_d_9_1937_09_po_sovetskoj.mp3"
+        },
+        {
+          "trackNumber": 9,
+          "name": "12 сентября 1937",
+          "node": false,
+          "source": "009_d_10_1937_09_po_sovetskoj.mp3"
+        },
+        {
+          "trackNumber": 10,
+          "name": "18 сентября 1937",
+          "node": false,
+          "source": "010_d_12_1937_09_po_sovetskoj.mp3"
+        },
+        {
+          "trackNumber": 11,
+          "name": "3 октября 1937",
+          "node": false,
+          "source": "011_d_15_1937_10_po_sovetskoj.mp3"
+        },
+        {
+          "trackNumber": 12,
+          "name": "24 октября 1937",
+          "node": false,
+          "source": "012_d_17_1937_10.mp3"
+        },
+        {
+          "trackNumber": 13,
+          "name": "Октябрь 1937",
+          "node": false,
+          "source": "013_d_18_1937.mp3"
+        },
+        {
+          "trackNumber": 14,
+          "name": "15 января 1939",
+          "node": false,
+          "source": "014_d_19_1939_01.mp3"
+        },
+        {
+          "trackNumber": 15,
+          "name": "4 марта 1939",
+          "node": false,
+          "source": "015_d_20_1939_03.mp3"
+        },
+        {
+          "trackNumber": 16,
+          "name": "13 марта 1939",
+          "node": true,
+          "source": "016_d_21_1939_03_sinagoga_belarus.mp3"
+        }
+      ]
+    }
+  ],
+  "offRoadAudioList": [
+    {
+      "name": "Роман Новис о событиях на Бронной горе.",
+      "source": "068_d_39_novis_roman_bronnaja_gora.mp3"
+    },
+    {
+      "name": "Из показаний Альфреда Бекманна о событиях на Бронной горе.",
+      "source": "069_d_61_beckmann_alfred_iz_pokazanij_bronnaja_gora.mp3"
+    },
+    {
+      "name": "Эсфирь Маневич о событиях на Бронной горе.",
+      "source": "070_d_38_manevich_esfir_bronnaja_gora.mp3"
+    }
+  ]
+}

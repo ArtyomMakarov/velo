@@ -14,4 +14,5 @@ export interface IMapElementFeature {
         type?:  "Point" | "Polygon" | "LineString";
     };
     id: string;
+    markerNumber?: number;
 }

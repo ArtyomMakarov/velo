@@ -1,4 +1,4 @@
-import {Component, OnInit, Input, AfterViewInit} from '@angular/core';
+import {Component, OnInit, Input} from '@angular/core';
 import * as mapboxgl from 'mapbox-gl';
 import { NavController, ModalController } from '@ionic/angular';
 import { environment } from '../../../../../environments/environment';
@@ -28,6 +28,8 @@ export class MapComponent implements  OnInit {
     features: IMapElementFeature[];
   };
 
+  @Input() route: IMapElementFeature;
+
   constructor(public modalController: ModalController,
               private router: Router,
               private memorialService: MemorialService) {}
@@ -37,8 +39,36 @@ export class MapComponent implements  OnInit {
     this.loadMap();
   }
 
+  private createLineString() {
+    this.map.addSource('route', {
+      'type': 'geojson',
+      'data': {
+        'type': 'Feature',
+        'properties': {},
+        'geometry': {
+          'type': 'LineString',
+          'coordinates': this.route.geometry.coordinates
+        }
+      }
+    });
+
+   this.map.addLayer({
+      'id': 'route',
+      'type': 'line',
+      'source': 'route',
+      'layout': {
+        'line-join': 'round',
+        'line-cap': 'round'
+      },
+      'paint': {
+        'line-color': 'rgb(189, 32, 49)',
+        'line-width': 10
+      }
+    });
+  }
+
   private filterGeoData() {
-    this.points = this.geodata.features.filter( feature => feature.geometry.type === 'Point');
+
     this.geodata.features.forEach( feature => {
       switch (feature.geometry.type) {
         case 'Point':
@@ -48,6 +78,24 @@ export class MapComponent implements  OnInit {
           this.polygons.push(feature);
       }
     });
+
+    if (this.route) {
+      this.points = [];
+
+      this.route.properties.locations.forEach( location => {
+
+        this.geodata.features.forEach( feature => {
+
+          if (location[0] === feature.id) {
+            feature.markerNumber = location[1];
+            this.points.push(feature);
+          }
+
+        });
+
+      });
+
+    }
     console.log(this.polygons, this.points);
   }
 
@@ -55,7 +103,7 @@ export class MapComponent implements  OnInit {
     this.map = new mapboxgl.Map({
       accessToken: environment.mapbox.accessToken,
       container: 'map',
-      style: 'mapbox://styles/mapbox/navigation-guidance-night-v4?optimize=true',
+      style: 'mapbox://styles/mapbox/dark-v10?optimize=true',
       zoom: 13,
       center: [this.viewBox.lng, this.viewBox.lat],
       attributionControl: false
@@ -65,6 +113,7 @@ export class MapComponent implements  OnInit {
       this.map.resize();
       this.createMarkers();
       this.createPolygons();
+      if (this.route) this.createLineString();
     });
   }
 
@@ -72,14 +121,28 @@ export class MapComponent implements  OnInit {
 
     this.points.forEach( point => {
       const el = document.createElement('div');
+      let markerImageHTML: string;
 
-      el.className = 'marker';
-      el.style.backgroundImage =
-        'url(/assets/icon/pointer.png)';
-      el.style.width = '50px';
-      el.style.height = '50px';
-      el.style.cursor = 'pointer';
-      el.style.backgroundSize = '100%';
+      if (point.markerNumber) {
+        markerImageHTML = `<div style="background-image: url(/assets/icon/pointer-1.png);
+                                                      width: 50px;
+                                                      height: 53px;
+                                                      background-size: 100%;
+                                                      color: white;
+                                                      font-size: 18px;
+                                                      padding: 14px;
+                                                      text-align: center;
+                                                      cursor = pointer;">
+                            ${point.markerNumber}</div>`;
+      } else {
+        markerImageHTML = `<div style="background-image: url(/assets/icon/pointer.png);
+                                                       width: 50px;
+                                                       height: 53px;
+                                                       background-size: 100%;
+                                                       cursor = pointer;"></div>`;
+      }
+
+      el.innerHTML = markerImageHTML;
 
       const div = this.createDOMDivForPopup(point);
 
@@ -157,12 +220,20 @@ export class MapComponent implements  OnInit {
   }
 
   public createDOMDivForPopup(popUpFeature: IMapElementFeature): HTMLDivElement {
-    const innerHtmlContent = `<div class="image">
+    let innerHtmlContent: string;
+
+    if(!popUpFeature.properties.image) {
+      innerHtmlContent = `<div class="detail">
+                             <p class="title">${popUpFeature.properties.name}</p>
+                          </div>`;
+    } else {
+      innerHtmlContent = `<div class="image">
                                   <img src="/assets/img/memorial/${popUpFeature.properties.image}" alt="${popUpFeature.properties.image_alt}">
-                                </div>
-                                <div class="detail">
-                                  <p class="title">${popUpFeature.properties.name}</p>
-                                </div>`;
+                          </div>
+                          <div class="detail">
+                            <p class="title">${popUpFeature.properties.name}</p>
+                          </div>`;
+    }
 
     const divElement = document.createElement('div');
     const assignBtn = document.createElement('div');
