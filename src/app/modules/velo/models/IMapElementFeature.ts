@@ -8,6 +8,7 @@ export interface IMapElementFeature {
         info?: string;
         image?: string;
         image_alt?: string;
+        id?: number;
     };
     geometry: {
         coordinates?: any[] | any[][] ;

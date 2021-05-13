@@ -33,7 +33,6 @@ export class MainPageComponent implements OnInit {
 
   public toggleFooter() {
     this.footerState = this.footerState === IonPullUpFooterState.Collapsed ? IonPullUpFooterState.Expanded : IonPullUpFooterState.Collapsed;
-    console.log(this.footerState);
   }
 
   public routeSelected(route: IMapElementFeature): void {

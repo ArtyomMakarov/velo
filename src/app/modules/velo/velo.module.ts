@@ -9,6 +9,7 @@ import {MemorialPageComponent} from './pages/memorial-page/memorial-page.compone
 import {RouteService} from './services/route.service';
 import {RoutePageComponent} from './pages/route-page/route-page.component';
 import {MemorialService} from './services/memorial.service';
+import {PlayerService} from './services/player.service';
 
 
 @NgModule({
@@ -26,7 +27,8 @@ import {MemorialService} from './services/memorial.service';
   providers: [
     MapService,
     RouteService,
-    MemorialService
+    MemorialService,
+    PlayerService
   ]
 })
 export class VeloModule { }
