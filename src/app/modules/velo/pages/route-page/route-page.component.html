@@ -1,9 +1,9 @@
 <ion-header>
   <ion-toolbar>
     <ion-buttons slot="start">
-      <ion-menu-button color="danger"></ion-menu-button>
+      <ion-back-button color="danger"></ion-back-button>
     </ion-buttons>
-    <ion-title>{{ route.properties.name }}</ion-title>
+    <ion-title color="danger">{{ route.properties.name }}</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -12,27 +12,58 @@
 </ion-content>
 
 
-<lib-ionic-pullup [(state)]="footerState"  class="pull-up" [toolbarTopMargin]="600">
+<lib-ionic-pullup [(state)]="footerState"  class="pull-up" [toolbarTopMargin]="400">
+  <ion-fab vertical="top" horizontal="end" slot="fixed" edge>
+    <ion-fab-button (click)="playerState?.status !== 'play' ? playAudio() : pauseAudio() " class="fab-audio-button" color="white">
+      <ion-icon [name]="playerState?.status === 'play' ? 'pause' : 'play'"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+
   <ion-toolbar color="white" (click)="toggleFooter()" class="pull-up__toolbar">
-      <ion-title> {{ playerState?.trackName }} </ion-title>
+      <ion-title color="danger"> {{ playerState?.trackName }} </ion-title>
   </ion-toolbar>
 
-  <ion-content>
-
-    <ion-fab right>
-      <button ion-fab (click)="playerState?.status !== 'play' ? playAudio() : pauseAudio() ">
-        <ion-icon [name]="playerState?.status === 'play' ? 'pause' : 'play'"></ion-icon>
-      </button>
-    </ion-fab>
+  <ion-content class="pull-up__content">
 
     <div class="audio-list" *ngIf="playlist">
-      <button *ngFor="let audio of playlist; let trackId = index;" (click)="playAudio(trackId)">
-        {{audio.name}}
-      </button>
+      <ul>
+        <li *ngFor="let audio of playlist; let trackId = index;" (click)="playAudio(trackId)" class="audio-list__item">
+          <button class="audio-list__button">{{audio.name}}</button>
+        </li>
+      </ul>
     </div>
 
-
     <div class="player">
+      <ion-footer>
+        <ion-toolbar color="grey" padding>
+          <ion-grid>
+            <ion-row>
+              <ion-range min="0" [max]="playerState?.duration" color="secondary" [value]="playerState?.position"
+                         [(ngModel)]="position" (touchstart)="pauseAudio()" (mousedown)="pauseAudio()" (touchend)="seekTo($event)" (mouseup)="seekTo($event)">
+                <ion-label slot="start" *ngIf="playerState">{{playerState.timerCount*1000 | date:'mm:ss'}}</ion-label>
+                <ion-label slot="end" *ngIf="playerState">{{playerState.duration*1000 | date:'mm:ss'}}</ion-label>
+              </ion-range>
+            </ion-row>
+            <ion-row align-items-center>
+              <ion-col>
+                <ion-button class="player-button" (click)="changeTrack('back')">
+                  <ion-icon name="play-back"></ion-icon>
+                </ion-button>
+              </ion-col>
+              <ion-col>
+                <ion-button (click)="playerState?.status !== 'play' ? playAudio() : pauseAudio() " class="player-button">
+                  <ion-icon [name]="playerState?.status === 'play' ? 'pause' : 'play'"></ion-icon>
+                </ion-button>
+              </ion-col>
+              <ion-col>
+                <ion-button class="player-button" (click)="changeTrack('forward')">
+                  <ion-icon name="play-forward"></ion-icon>
+                </ion-button>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+        </ion-toolbar>
+      </ion-footer>
     </div>
 
   </ion-content>

@@ -1,9 +1,7 @@
 import {Component, OnInit, Input} from '@angular/core';
 import * as mapboxgl from 'mapbox-gl';
-import { NavController, ModalController } from '@ionic/angular';
 import { environment } from '../../../../../environments/environment';
 import {IMapElementFeature} from '../../models/IMapElementFeature';
-import {MemorialPageComponent} from '../../pages/memorial-page/memorial-page.component';
 import {Router} from '@angular/router';
 import {MemorialService} from '../../services/memorial.service';
 
@@ -30,8 +28,7 @@ export class MapComponent implements  OnInit {
 
   @Input() route: IMapElementFeature;
 
-  constructor(public modalController: ModalController,
-              private router: Router,
+  constructor(private router: Router,
               private memorialService: MemorialService) {}
 
   ngOnInit() {
@@ -249,17 +246,6 @@ export class MapComponent implements  OnInit {
     });
 
     return divElement;
-  }
-
-  public async openDetailModal(feature: IMapElementFeature) {
-    const modal = await this.modalController.create({
-      component: MemorialPageComponent,
-      cssClass: 'my-custom-class',
-      componentProps: {
-        'popUpFeature': feature
-      }
-    });
-    return await modal.present();
   }
 
 }

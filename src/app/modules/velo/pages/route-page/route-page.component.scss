@@ -1,5 +1,4 @@
 .pull-up {
-  height: 0;
   &__toolbar {
     --color: rgb(189, 32, 49);
     --background: #dfdfdf;
@@ -7,8 +6,37 @@
     cursor: pointer;
     text-align: center;
   }
+  &__content{
+    --background: grey;
+  }
   &__item {
     cursor: pointer;
   }
 }
+.audio-list {
+  &__item {
+    list-style-type: none;
+    margin: 10px auto;
+    width: fit-content;
+  }
+  &__button {
+    background-color: unset;
+    font-size: 20px;
+    color: white;
+  }
+}
 
+.fab-audio-button {
+  ion-icon {
+    fill: rgb(189, 32, 49);
+  }
+}
+
+.player-button {
+  margin: 0 auto;
+  width: 50px;
+  --box-shadow: 0 0 0 0;
+  display: block;
+  color: black;
+  --background: grey;
+}

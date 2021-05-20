@@ -2,8 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { IonPullUpFooterState } from 'ionic-pullup';
 import {MapService} from '../../services/map.service';
 import {IMapElementFeature} from '../../models/IMapElementFeature';
-import {RouteService} from '../../services/route.service';
 import {Router} from '@angular/router';
+import {LocalStorageService} from '../../services/local-storage.service';
 
 @Component({
   selector: 'app-main-page',
@@ -18,12 +18,13 @@ export class MainPageComponent implements OnInit {
   public footerTitle = 'Выбор Маршрута';
 
   constructor(private mapService: MapService,
-              private routeService: RouteService,
-              private router: Router) {
-    this.footerState = IonPullUpFooterState.Collapsed;
+              private router: Router,
+              private localStorageService: LocalStorageService) {
   }
 
   ngOnInit() {
+    this.footerState = IonPullUpFooterState.Collapsed;
+
     this.mapService.getGeoData().subscribe( data => {
       this.geoDataForCommonMap = data;
       this.routes = data.features
@@ -33,10 +34,11 @@ export class MainPageComponent implements OnInit {
 
   public toggleFooter() {
     this.footerState = this.footerState === IonPullUpFooterState.Collapsed ? IonPullUpFooterState.Expanded : IonPullUpFooterState.Collapsed;
+    console.log(this.footerState);
   }
 
   public routeSelected(route: IMapElementFeature): void {
-    this.routeService.safeRoute(route);
+    this.localStorageService.set(route.properties.name, route);
     this.router.navigate(['route', route.properties.name]);
   }
 

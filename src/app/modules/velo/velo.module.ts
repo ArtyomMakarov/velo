@@ -10,7 +10,8 @@ import {RouteService} from './services/route.service';
 import {RoutePageComponent} from './pages/route-page/route-page.component';
 import {MemorialService} from './services/memorial.service';
 import {PlayerService} from './services/player.service';
-
+import {PlaylistService} from './services/playlist.service';
+import {LocalStorageService} from './services/local-storage.service';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,9 @@ import {PlayerService} from './services/player.service';
     MapService,
     RouteService,
     MemorialService,
-    PlayerService
+    PlayerService,
+    PlaylistService,
+    LocalStorageService
   ]
 })
 export class VeloModule { }
